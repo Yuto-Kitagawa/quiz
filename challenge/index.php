@@ -50,7 +50,7 @@ $counter = array_search($n, $_SESSION['counter']);
         ?>
             <div class="d-flex align-items-center">
                 <div class="lead col-2">問題:</div>
-                <div class="display-1 text-center col-10"><?= $_SESSION['question'][$n] ?></div>
+                <div class="text-center col-10 lead"><?= $_SESSION['question'][$n] ?></div>
             </div>
 
             <div class="mt-5 col-10 m-auto text-center">
