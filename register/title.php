@@ -33,7 +33,7 @@
         <div class="text-center lead" style="font-size:1em !important;">※ほかのタイトルとかぶらないようにしてください</div>
         <form action="./question-and-answer.php" method="POST">
             <div class="col-10 m-auto">
-                <input type="text" name="t" class="form-control">
+                <input type="text" name="t" class="form-control" required autofocus>
             </div>
 
             <div class="d-flex justify-content-around text-center p-3">

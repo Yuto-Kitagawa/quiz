@@ -82,6 +82,14 @@ $counter = array_search($n, $_SESSION['counter']);
     </div>
 
     <script>
+        document.getElementById('answer').addEventListener('keydown', (e) => {
+            if (e.keyCode == 13) {
+                document.getElementById('decide').click();
+            }
+        })
+    </script>
+
+    <script>
         $(function() {
             $('button#decide').click(() => {
                 let ans = $('#answer').val();
