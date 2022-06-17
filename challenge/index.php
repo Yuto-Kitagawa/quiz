@@ -54,7 +54,7 @@ $counter = array_search($n, $_SESSION['counter']);
             </div>
 
             <div class="mt-5 col-10 m-auto text-center">
-                <input type="text" name="answer" id="answer" class="p-2" placeholder="答え" required>
+                <input type="text" name="answer" id="answer" class="p-2" placeholder="答え" autofocus required>
             </div>
 
             <div class="">
@@ -85,6 +85,7 @@ $counter = array_search($n, $_SESSION['counter']);
         document.getElementById('answer').addEventListener('keydown', (e) => {
             if (e.keyCode == 13) {
                 document.getElementById('decide').click();
+                document.getElementById('next').focus();
             }
         })
     </script>
