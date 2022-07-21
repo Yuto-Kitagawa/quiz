@@ -1,12 +1,14 @@
 <?php
 
 include "./function/function.php";
-define('DB_CHARACTERSET', 'UTF8');
 
+//インスタンス生成
 $func = new Functions;
+//問題のタイトルを取得
 $title_array = [];
 $title_array = $func->getTitles();
 
+//トップページ読み込み時セッションを空にする
 session_start();
 $_SESSION = array();
 session_destroy();
@@ -45,21 +47,29 @@ session_destroy();
             <a class="navbar-brand" href="#">yutons QUIZ</a>
         </div>
     </nav>
+
     <div class="col-12 text-center mt-3 register">
         <a href="./register/title.php" class="btn btn-outline-primary col-10 m-auto p-4 ">問題登録</a>
     </div>
-    <div class="quiz-wrapper col-10 m-auto mt-5">
+
+    <div class="quiz-wrapper col-10 col-sm-10 col-md-8 col-lg-6 m-auto mt-5">
         <div class="lead text-center">問題集</div>
         <ul class="list-group">
             <?php
             foreach ($title_array as $i) {
             ?>
-                <li class="list-group-item p-0"><a href='./action/get-questions.php?q=<?= $i ?>&number=1' class="d-block p-2 ps-3"><?= $i ?></a></li>
+                <li class="list-group-item p-0">
+                    <a href='./action/get-questions.php?q=<?= $i ?>&number=1' class="d-block p-2 ps-3">
+                        <?= $i ?>
+                    </a>
+                </li>
             <?php
             }
             ?>
         </ul>
     </div>
+
+    <div class="" style="height: 30vh;"></div>
 </body>
 
 </html>

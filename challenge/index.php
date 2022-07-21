@@ -48,13 +48,10 @@ $counter = array_search($n, $_SESSION['counter']);
         <?php
         } else {
         ?>
-            <div class="d-flex align-items-center">
-                <div class="lead col-2">問題:</div>
-                <div class="text-center col-10 lead"><?= $_SESSION['question'][$n] ?></div>
-            </div>
+            <div class="text-center fs-4"><?= $_SESSION['question'][$n] ?></div>
 
-            <div class="mt-5 col-10 m-auto text-center">
-                <input type="text" name="answer" id="answer" class="p-2" placeholder="答え" autofocus required>
+            <div class="mt-5 col-6 m-auto text-center">
+                <input type="text" name="answer" id="answer" class="p-2 col-12" placeholder="答え" autofocus required>
             </div>
 
             <div class="">

@@ -7,10 +7,9 @@ class Functions extends Database
     public function getTitles()
     {
         $sql = "SELECT DISTINCT(title) FROM quiz ORDER BY id DESC;";
+
         $sth = $this->conn->prepare($sql);
-
         $sth->execute();
-
         $result = [];
 
         while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
